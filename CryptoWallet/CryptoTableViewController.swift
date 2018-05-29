@@ -10,7 +10,6 @@ import UIKit
 
 class CryptoTableViewController: UITableViewController {
 var dataCollection = ["Bitcoin", "Ethereum", "Ripple", "Nem", "Waves", "IOTA"]
-    var new = "test"
     
     override func viewDidLoad() {
         super.viewDidLoad()
