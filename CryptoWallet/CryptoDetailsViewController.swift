@@ -15,11 +15,16 @@ class CryptoDetailsViewController: UIViewController {
     
     var name = ""
     var image = UIImage()
+    var cryptoDataExemplar: GetAPIDataFor = GetAPIDataFor()
+    var currencyDetailView: CurrencyData?
+    var currencyTest = CurrencyData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailedCryptoName.text = name
-        detailedCryptoImage.image = UIImage(named: name)
+        detailedCryptoName.text = currencyTest.name
+        detailedCryptoImage.image = UIImage(named: currencyTest.name!)
+        detailedCryptoPrice.text = currencyTest.price_usd
+        print(currencyTest)
 
         // Do any additional setup after loading the view.
     }
@@ -29,7 +34,11 @@ class CryptoDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    @IBAction func onPressedButtonGetData(_ sender: Any) {
+        cryptoDataExemplar.myFetchJSON {
+        }
+    }
     /*
     // MARK: - Navigation
 

@@ -9,14 +9,21 @@
 import UIKit
 
 class CryptoTableViewController: UITableViewController {
-var dataCollection = ["Bitcoin", "Ethereum", "Ripple", "Nem", "Waves", "IOTA"]
+    //var dataCollection = ["Bitcoin", "Ethereum", "Ripple", "Nem", "Waves", "IOTA"]
+    var cryptoData = GetAPIDataFor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //вызываю функцию получения данных по API с параметром: перезагрузка таблицы
+        //если вызывать эту функцию без параметра то таблица загружается пустая, т.к. данные не успели "получиться"
+        cryptoData.myFetchJSON(reloadTable: self.tableView.reloadData)
+        //cryptoData.myFetchJSON() {
+        //    self.tableView.reloadData()
+       // }
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -27,24 +34,28 @@ var dataCollection = ["Bitcoin", "Ethereum", "Ripple", "Nem", "Waves", "IOTA"]
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
+    //определяем сколько секций будет в таблице
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.dataCollection.count
+        //return self.dataCollection.count\
+        return cryptoData.currencyData.count
     }
 
-    
+    //заполняем ячейку таблицы данными
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cryptoCellIdentifier", for: indexPath) as! CryptoTableViewCell
         // Configure the cell...
-        let cryptoName = self.dataCollection[indexPath.row]
-        cell.cryptoName.text = cryptoName
-        cell.cryptoImage.image = UIImage(named: cryptoName)
+
+        let data = cryptoData.currencyData[indexPath.row]
+        cell.cryptoName.text = data.name
+        cell.cryptoPrice.text = data.price_usd
+        cell.cryptoImage.image = UIImage(named: data.name!)
+        
         
         return cell
     }
@@ -85,22 +96,47 @@ var dataCollection = ["Bitcoin", "Ethereum", "Ripple", "Nem", "Waves", "IOTA"]
     }
     */
 
+    //передача данных на другой UI view и переход к другому UIview
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "goToDetails", sender: dataCollection[indexPath.row])
+        //performSegue(withIdentifier: "goToDetails", sender: dataCollection[indexPath.row])
+        performSegue(withIdentifier: "goToDetails", sender: cryptoData.currencyData[indexPath.row])
+        
     }
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    //Подготовка данный к передаче на другой UI View
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let svc = segue.destination as! CryptoDetailsViewController
-        //svc.name = sender as? String
-        svc.name = (sender as? String)!
-        //svc.image = sender as! UIImage
+        //let svc = segue.destination as! CryptoDetailsViewController
+        //svc.name = (sender as? String)!
+        let dataToPass = segue.destination as! CryptoDetailsViewController
+        dataToPass.currencyTest = (sender as! CurrencyData)
+        
+        
+        
     }
+    
+ /*
+    //Переход по нажатию ячейки
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        //self.tableView.deselectRow(at: indexPath, animated: true)
+        let video = getLatestDataVar.currencyData[indexPath.row]
+        performSegue(withIdentifier: "showDetails", sender: video)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("ячейка нажата")
+        if let destinationV = segue.destination as? ViewControllerCellCurrency {
+            destinationV.currencyTest = (sender as? CurrencyData)!
+        }
+    }
+    */
     
 
 }
