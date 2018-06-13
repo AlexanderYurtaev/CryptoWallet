@@ -14,6 +14,7 @@
 		D33BDB7720B1C589004665F6 /* CryptoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33BDB7620B1C589004665F6 /* CryptoTableViewController.swift */; };
 		D33BDB7920B1C59F004665F6 /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33BDB7820B1C59F004665F6 /* CryptoTableViewCell.swift */; };
 		D33BDB7B20B1D2A1004665F6 /* CryptoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33BDB7A20B1D2A1004665F6 /* CryptoDetailsViewController.swift */; };
+		D3822DE720D1AC2D003B95C4 /* CryptoCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3822DE620D1AC2D003B95C4 /* CryptoCustomViewController.swift */; };
 		D38CA4CA20C0863D0073CDB3 /* CryptoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38CA4C920C0863D0073CDB3 /* CryptoData.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		D33BDB7620B1C589004665F6 /* CryptoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewController.swift; sourceTree = "<group>"; };
 		D33BDB7820B1C59F004665F6 /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
 		D33BDB7A20B1D2A1004665F6 /* CryptoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailsViewController.swift; sourceTree = "<group>"; };
+		D3822DE620D1AC2D003B95C4 /* CryptoCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCustomViewController.swift; sourceTree = "<group>"; };
 		D38CA4C920C0863D0073CDB3 /* CryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				D33BDB7820B1C59F004665F6 /* CryptoTableViewCell.swift */,
 				D33BDB7A20B1D2A1004665F6 /* CryptoDetailsViewController.swift */,
 				D38CA4C920C0863D0073CDB3 /* CryptoData.swift */,
+				D3822DE620D1AC2D003B95C4 /* CryptoCustomViewController.swift */,
 			);
 			path = CryptoWallet;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				D33BDB7920B1C59F004665F6 /* CryptoTableViewCell.swift in Sources */,
 				D33BDB7720B1C589004665F6 /* CryptoTableViewController.swift in Sources */,
+				D3822DE720D1AC2D003B95C4 /* CryptoCustomViewController.swift in Sources */,
 				D33BDB7B20B1D2A1004665F6 /* CryptoDetailsViewController.swift in Sources */,
 				D33BDB6520B1C572004665F6 /* AppDelegate.swift in Sources */,
 				D38CA4CA20C0863D0073CDB3 /* CryptoData.swift in Sources */,

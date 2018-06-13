@@ -24,7 +24,7 @@ struct CurrencyData: Decodable {
 class GetAPIDataFor {
     
     var currencyData = [CurrencyData]()
-    let coinMarketCapURL = "https://api.coinmarketcap.com/v1/ticker/?start=0&limit=6"
+    let coinMarketCapURL = "https://api.coinmarketcap.com/v1/ticker/?start=0&limit=10"
     
     public func getLatestData(completed: @escaping () -> ()) {
         

@@ -12,6 +12,9 @@ class CryptoTableViewCell: UITableViewCell {
     @IBOutlet weak var cryptoImage: UIImageView!
     @IBOutlet weak var cryptoName: UILabel!
     @IBOutlet weak var cryptoPrice: UILabel!
+    @IBOutlet weak var crypto24hChangeLabel: UILabel!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

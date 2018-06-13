@@ -20,7 +20,7 @@ class CryptoTableViewController: UITableViewController {
         //cryptoData.myFetchJSON() {
         //    self.tableView.reloadData()
        // }
-
+        setupNavigationBar()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,6 +31,15 @@ class CryptoTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setupNavigationBar() {
+        navigationItem.title = "Top 10 coins"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        //setTitleVerticalPositionAdjustment
+        //navigationController?.navigationBar.setTitleVerticalPositionAdjustment(6, for: .default)
     }
 
     // MARK: - Table view data source
@@ -53,7 +62,24 @@ class CryptoTableViewController: UITableViewController {
 
         let data = cryptoData.currencyData[indexPath.row]
         cell.cryptoName.text = data.name
-        cell.cryptoPrice.text = data.price_usd
+        
+        //конфертим Стринг во флоат
+        let tempFloatPrice = (data.price_usd! as NSString).floatValue
+        //конфертим флоат в стринг с ограничение количества символов после запятой
+        cell.cryptoPrice.text = (String(format: "%.2f", tempFloatPrice) + "$")
+        //cell.cryptoPrice.textColor = UIColor.green
+        
+        let temp24hChangeFloat = (data.percent_change_24h! as NSString).floatValue
+        if temp24hChangeFloat > 0 {
+            cell.crypto24hChangeLabel.text = (data.percent_change_24h! + "%")
+            cell.crypto24hChangeLabel.textColor = UIColor(red: 91.0/255.0, green: 197.0/255.0, blue: 159.0/255.0, alpha: 1.0)
+        }
+        else {
+            cell.crypto24hChangeLabel.text = (data.percent_change_24h! + "%")
+            cell.crypto24hChangeLabel.textColor = UIColor.red
+        }
+        
+        
         cell.cryptoImage.image = UIImage(named: data.name!)
         
         
@@ -121,22 +147,5 @@ class CryptoTableViewController: UITableViewController {
         
     }
     
- /*
-    //Переход по нажатию ячейки
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        //self.tableView.deselectRow(at: indexPath, animated: true)
-        let video = getLatestDataVar.currencyData[indexPath.row]
-        performSegue(withIdentifier: "showDetails", sender: video)
-
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("ячейка нажата")
-        if let destinationV = segue.destination as? ViewControllerCellCurrency {
-            destinationV.currencyTest = (sender as? CurrencyData)!
-        }
-    }
-    */
-    
-
+ 
 }
