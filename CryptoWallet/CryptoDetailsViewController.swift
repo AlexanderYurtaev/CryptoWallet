@@ -57,18 +57,18 @@ class CryptoDetailsViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        saveMycoinInroCurrencyData()
+        saveMycoinIntoCurrencyData()
         myCoinTextField.resignFirstResponder()
         myCoinTextField.textColor = UIColor(red: 91.0/255.0, green: 187.0/255.0, blue: 159.0/255.0, alpha: 1.0)
         return true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        saveMycoinInroCurrencyData()
+        saveMycoinIntoCurrencyData()
         myCoinTextField.resignFirstResponder()
     }
     
-    func saveMycoinInroCurrencyData() {
+    func saveMycoinIntoCurrencyData() {
         let myCoin = myCoinTextField.text
         print(cryptoDataExemplar.currencyData[0])
         

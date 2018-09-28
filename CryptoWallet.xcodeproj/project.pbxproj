@@ -14,6 +14,7 @@
 		D33BDB7720B1C589004665F6 /* CryptoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33BDB7620B1C589004665F6 /* CryptoTableViewController.swift */; };
 		D33BDB7920B1C59F004665F6 /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33BDB7820B1C59F004665F6 /* CryptoTableViewCell.swift */; };
 		D33BDB7B20B1D2A1004665F6 /* CryptoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33BDB7A20B1D2A1004665F6 /* CryptoDetailsViewController.swift */; };
+		D33FDF58215804BC005AE1F2 /* MyCurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33FDF57215804BC005AE1F2 /* MyCurrenciesViewController.swift */; };
 		D3822DE720D1AC2D003B95C4 /* CryptoCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3822DE620D1AC2D003B95C4 /* CryptoCustomViewController.swift */; };
 		D38CA4CA20C0863D0073CDB3 /* CryptoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38CA4C920C0863D0073CDB3 /* CryptoData.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		D33BDB7620B1C589004665F6 /* CryptoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewController.swift; sourceTree = "<group>"; };
 		D33BDB7820B1C59F004665F6 /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
 		D33BDB7A20B1D2A1004665F6 /* CryptoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailsViewController.swift; sourceTree = "<group>"; };
+		D33FDF57215804BC005AE1F2 /* MyCurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCurrenciesViewController.swift; sourceTree = "<group>"; };
 		D3822DE620D1AC2D003B95C4 /* CryptoCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCustomViewController.swift; sourceTree = "<group>"; };
 		D38CA4C920C0863D0073CDB3 /* CryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				D33BDB7A20B1D2A1004665F6 /* CryptoDetailsViewController.swift */,
 				D38CA4C920C0863D0073CDB3 /* CryptoData.swift */,
 				D3822DE620D1AC2D003B95C4 /* CryptoCustomViewController.swift */,
+				D33FDF57215804BC005AE1F2 /* MyCurrenciesViewController.swift */,
 			);
 			path = CryptoWallet;
 			sourceTree = "<group>";
@@ -108,6 +111,7 @@
 				TargetAttributes = {
 					D33BDB6020B1C572004665F6 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -148,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D33BDB7920B1C59F004665F6 /* CryptoTableViewCell.swift in Sources */,
+				D33FDF58215804BC005AE1F2 /* MyCurrenciesViewController.swift in Sources */,
 				D33BDB7720B1C589004665F6 /* CryptoTableViewController.swift in Sources */,
 				D3822DE720D1AC2D003B95C4 /* CryptoCustomViewController.swift in Sources */,
 				D33BDB7B20B1D2A1004665F6 /* CryptoDetailsViewController.swift in Sources */,
@@ -305,7 +310,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sdf.CryptoWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -323,7 +328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sdf.CryptoWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
