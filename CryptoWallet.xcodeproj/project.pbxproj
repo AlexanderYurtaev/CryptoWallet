@@ -17,6 +17,7 @@
 		D33FDF58215804BC005AE1F2 /* MyCurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33FDF57215804BC005AE1F2 /* MyCurrenciesViewController.swift */; };
 		D3822DE720D1AC2D003B95C4 /* CryptoCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3822DE620D1AC2D003B95C4 /* CryptoCustomViewController.swift */; };
 		D38CA4CA20C0863D0073CDB3 /* CryptoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38CA4C920C0863D0073CDB3 /* CryptoData.swift */; };
+		EDEBC02B21D01D88006DBB9F /* AddCoinPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEBC02A21D01D88006DBB9F /* AddCoinPopUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D33FDF57215804BC005AE1F2 /* MyCurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCurrenciesViewController.swift; sourceTree = "<group>"; };
 		D3822DE620D1AC2D003B95C4 /* CryptoCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCustomViewController.swift; sourceTree = "<group>"; };
 		D38CA4C920C0863D0073CDB3 /* CryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoData.swift; sourceTree = "<group>"; };
+		EDEBC02A21D01D88006DBB9F /* AddCoinPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoinPopUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				D38CA4C920C0863D0073CDB3 /* CryptoData.swift */,
 				D3822DE620D1AC2D003B95C4 /* CryptoCustomViewController.swift */,
 				D33FDF57215804BC005AE1F2 /* MyCurrenciesViewController.swift */,
+				EDEBC02A21D01D88006DBB9F /* AddCoinPopUpVC.swift */,
 			);
 			path = CryptoWallet;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				D3822DE720D1AC2D003B95C4 /* CryptoCustomViewController.swift in Sources */,
 				D33BDB7B20B1D2A1004665F6 /* CryptoDetailsViewController.swift in Sources */,
 				D33BDB6520B1C572004665F6 /* AppDelegate.swift in Sources */,
+				EDEBC02B21D01D88006DBB9F /* AddCoinPopUpVC.swift in Sources */,
 				D38CA4CA20C0863D0073CDB3 /* CryptoData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

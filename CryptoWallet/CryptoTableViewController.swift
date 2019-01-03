@@ -48,7 +48,7 @@ class CryptoTableViewController: UITableViewController {
         return 1
     }
 
-    //определяем сколько секций будет в таблице
+    //определяем сколько строк будет в секции
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //return self.dataCollection.count\
